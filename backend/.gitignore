@@ -3,6 +3,10 @@
 # KNOWNET - Git Ignore Configuration
 # ==========================================
 
+# Files already present in the GitHub repository
+/README.md
+/PROJECT_OVERVIEW.md
+
 # ---------- Frontend: React / Vite ----------
 frontend/node_modules/
 frontend/dist/
