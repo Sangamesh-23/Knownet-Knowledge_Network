@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KnowNet — Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/kn_profile.css">
+  <meta name="color-scheme" content="light">
+</head>
+
+<body>
+  <div class="floating-icons">
+    <div class="floating-icon">🎨</div>
+    <div class="floating-icon">💻</div>
+    <div class="floating-icon">🎵</div>
+    <div class="floating-icon">📚</div>
+    <div class="floating-icon">🧵</div>
+    <div class="floating-icon">🔬</div>
+    <div class="floating-icon">🎭</div>
+    <div class="floating-icon">🎤</div>
+    <div class="floating-icon">🛠️</div>
+    <div class="floating-icon">⚙️</div>
+  </div>
+
+  <header class="header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <img src="/assets/images/logo.jpg" alt="KnowNet Logo" width="48" height="48">
+      </div>
+      <h1>KnowNet</h1>
+    </div>
+    <nav class="nav">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/pages/kn_dashboard.html" class="nav-link">Dashboard</a>
+      <a href="/pages/kn_skills.html" class="nav-link">Skills</a>
+      <a href="/pages/kn_meeting.html" class="nav-link">Meetings</a>
+      <a href="/pages/kn_chat.html" class="nav-link">Chat</a>
+      <a href="/pages/kn_profile.html" class="nav-link active">Profile</a>
+    </nav>
+  </header>
+
+  <main class="page" aria-labelledby="profile-title">
+    <section class="profile-card">
+      <div class="profile__header">
+        <div class="avatar-wrapper">
+          <div class="avatar" id="avatarContainer">
+            <img src="/assets/images/logo.jpg" alt="User avatar" id="userAvatar">
+            <div class="avatar-overlay">
+              <span>📷</span>
+            </div>
+          </div>
+          <input type="file" id="avatarUpload" accept="image/*" hidden>
+        </div>
+        <div class="identity">
+          <h1 id="profile-title" class="title">Loading...</h1>
+          <p class="subtitle" id="profile-subtitle">Loading profile...</p>
+        </div>
+        <div class="header__actions">
+          <button class="btn btn--secondary" type="button">Share Profile</button>
+          <button class="btn btn--primary" type="button">Edit Profile</button>
+        </div>
+      </div>
+
+      <div class="profile__content">
+        <aside class="panel about" aria-labelledby="about-title">
+          <h2 id="about-title" class="panel__title">About</h2>
+          <p class="about__text" id="aboutText">
+            Loading profile information...
+          </p>
+          <ul class="meta" id="profileMeta">
+            <li><span>📍</span> <span id="profileLocation">Loading...</span></li>
+            <li><span>💼</span> <span id="profileRole">Loading...</span></li>
+            <li><span>🕒</span> <span id="profileMemberSince">Loading...</span></li>
+            <li id="profileWebsiteRow" hidden><span>🔗</span> <a id="profileWebsiteLink" href="#" target="_blank"
+                rel="noopener">Website</a></li>
+          </ul>
+        </aside>
+
+        <section class="panel skills" aria-labelledby="skills-title">
+          <div class="section__head">
+            <h2 id="skills-title" class="panel__title">Skills</h2>
+            <button class="link" type="button" id="addSkillBtn">Add Skill</button>
+          </div>
+          <div class="chips" id="skillsChips">
+            <span class="chip">Loading skills...</span>
+          </div>
+        </section>
+
+        <section class="panel achievements" aria-labelledby="achieve-title">
+          <div class="section__head">
+            <h2 id="achieve-title" class="panel__title">Achievements</h2>
+            <a class="link" href="#">View all</a>
+          </div>
+          <ul class="badge-list">
+            <li class="badge">🏆 7-day learning streak</li>
+            <li class="badge">💬 100 helpful replies</li>
+            <li class="badge">🎓 Completed: React Architecture</li>
+          </ul>
+        </section>
+
+        <section class="panel activity" aria-labelledby="activity-title">
+          <div class="section__head">
+            <h2 id="activity-title" class="panel__title">Recent Activity</h2>
+            <a class="link" href="#">See all</a>
+          </div>
+          <ul class="post-list" id="activityList">
+            <li class="post">
+              <h3 class="post__title">Loading recent activity...</h3>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2025 KnowNet</span>
+    <nav class="footer__nav">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">FAQ</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </nav>
+  </footer>
+  <script src="/assets/js/kn_api.js"></script>
+  <script src="/assets/js/kn_profile.js"></script>
+</body>
+
+</html>
